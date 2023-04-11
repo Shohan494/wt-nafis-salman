@@ -6,6 +6,8 @@ Step 1: Import the employee.sql file in your data via phpMyAdmin.
 
 Step 2: Create a Model to handle the database operations. Here's an example:
 
+// filename model/EmployeeModel.php
+
 ```
 
 class EmployeeModel {
@@ -22,6 +24,9 @@ class EmployeeModel {
         $stmt->execute();
     }
 }
+
+// controller/EmployeeController.php
+
 ```
 
 Step 3: Create a Controller to handle the Delete action. Here's an example:
@@ -43,6 +48,8 @@ class EmployeeController {
 ```
 Step 4: Create a View to display the Delete form. Here's an example:
 
+// filename delete-employee.php
+
 ```
 
 <form method="post" action="delete.php">
@@ -52,6 +59,8 @@ Step 4: Create a View to display the Delete form. Here's an example:
 </form>
 ```
 Step 5: Handle the form submission in a separate PHP file. Here's an example:
+
+// filename delete.php
 
 ```
 require_once 'model/EmployeeModel.php';
